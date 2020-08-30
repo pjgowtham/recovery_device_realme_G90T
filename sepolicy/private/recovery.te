@@ -1,0 +1,38 @@
+# Android HIDL
+allow recovery hidl_manager_hwservice:hwservice_manager add;
+allow recovery hidl_base_hwservice:hwservice_manager add;
+allow recovery hidl_token_hwservice:hwservice_manager add;
+
+# Android HALs
+allow recovery hal_keymaster_hwservice:hwservice_manager find;
+
+# Ashmem
+allow recovery ashmem_device:chr_file execute;
+
+# Data
+allow recovery media_rw_data_file:dir getattr;
+allow recovery unencrypted_data_file:dir search;
+allow recovery unencrypted_data_file:file { getattr open read };
+
+# DM Device
+allow recovery dm_device:blk_file ioctl;
+
+# Kernel
+allow recovery kernel:security compute_av;
+
+# Recovery
+allow recovery recovery:binder { call set_context_mgr transfer };
+allow recovery recovery:capability sys_rawio;
+allow recovery recovery:netlink_selinux_socket { bind create };
+allow recovery recovery:process execmem;
+
+# RootFS
+allow recovery rootfs:dir { add_name create remove_name rmdir write };
+allow recovery rootfs:lnk_file create;
+
+# SELinuxFS
+allow recovery selinuxfs:dir { open read write };
+
+# SysFS
+allow recovery sysfs:file { getattr open read write };
+allow recovery sysfs:dir { read open };

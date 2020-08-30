@@ -1,0 +1,1 @@
+allow ueventd rootfs:file entrypoint;

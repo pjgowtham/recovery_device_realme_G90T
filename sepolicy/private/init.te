@@ -1,0 +1,11 @@
+# Kernel
+allow init kernel:system module_request;
+
+# System files
+allow init system_file:lnk_file create;
+
+# SysFS
+allow init sysfs_devices_system_cpu:file write;
+
+# RootFS
+allow init rootfs:file { create write };

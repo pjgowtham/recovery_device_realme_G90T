@@ -1,0 +1,8 @@
+# Block device
+allow kernel block_device:blk_file { open read write };
+
+# DebugFS
+allow kernel debugfs_mmc:dir search;
+
+# Modules
+allow kernel proc_modules:file { getattr open read };
