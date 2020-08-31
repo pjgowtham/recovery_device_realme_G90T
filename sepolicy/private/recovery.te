@@ -32,6 +32,7 @@ allow recovery rootfs:lnk_file create;
 
 # SELinuxFS
 allow recovery selinuxfs:dir { open read write };
+allow recovery selinuxfs:file write;
 
 # SysFS
 allow recovery sysfs:file { getattr open read write };

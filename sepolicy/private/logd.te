@@ -1,1 +1,7 @@
-allow logd rootfs:file { entrypoint execute map read };
+# RootFS
+allow logd rootfs:file { entrypoint execute getattr map open read };
+allow logd rootfs:dir read;
+
+# Socket device
+allow logd socket_device:dir { write add_name };
+allow logd socket_device:sock_file create;

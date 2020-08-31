@@ -6,3 +6,6 @@ allow kernel debugfs_mmc:dir search;
 
 # Modules
 allow kernel proc_modules:file { getattr open read };
+
+# RootFS
+allow kernel rootfs:file execute_no_trans;
