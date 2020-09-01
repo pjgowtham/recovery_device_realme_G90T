@@ -5,6 +5,7 @@ allow recovery hidl_token_hwservice:hwservice_manager add;
 
 # Android HALs
 allow recovery hal_keymaster_hwservice:hwservice_manager find;
+allow recovery hal_gatekeeper_hwservice:hwservice_manager find;
 
 # Ashmem
 allow recovery ashmem_device:chr_file execute;
@@ -13,6 +14,9 @@ allow recovery ashmem_device:chr_file execute;
 allow recovery media_rw_data_file:dir getattr;
 allow recovery unencrypted_data_file:dir search;
 allow recovery unencrypted_data_file:file { getattr open read };
+
+# Device
+allow recovery device:chr_file { ioctl open map read write };
 
 # DM Device
 allow recovery dm_device:blk_file ioctl;
