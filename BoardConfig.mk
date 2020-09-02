@@ -133,3 +133,4 @@ PLATFORM_VERSION := 16.1.0
 
 # PBRP specific build flags
 PB_TORCH_PATH := "/sys/class/leds/flash-light"
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
