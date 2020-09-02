@@ -7,9 +7,6 @@
 # Dynamic partition
 system           /system			ext4
 vendor           /vendor			ext4
-oppo_product             /oppo_product	ext4
-oppo_engineering         /oppo_engineering	ext4
-common_preload           /common_preload	ext4
 
 # Common partition
 /super_image     emmc    /dev/block/platform/bootdevice/by-name/super              flags=backup=1;display="Super"
