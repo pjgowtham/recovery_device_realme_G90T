@@ -11,7 +11,6 @@ vendor           /vendor			ext4
 # Common partition
 /super_image     emmc    /dev/block/platform/bootdevice/by-name/super              flags=backup=1;display="Super"
 /data            ext4    /dev/block/platform/bootdevice/by-name/userdata           flags=fileencryption=aes-256-xts
-/sdcard          ext4    /data/media/0                                             flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 /boot            emmc    /dev/block/platform/bootdevice/by-name/boot               flags=backup=1;display="Boot";flashimg=1
 /dtbo            emmc    /dev/block/platform/bootdevice/by-name/dtbo               flags=backup=1;display="Dtbo";flashimg=1
 /cache           ext4    /dev/block/platform/bootdevice/by-name/cache              flags=backup=1;wipeingui;wipeduringfactoryreset
